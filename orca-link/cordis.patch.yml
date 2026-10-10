@@ -1,0 +1,4 @@
+﻿# Orca Link Skin Bundle Patch
+insert:
+  - id: ui-skin-orca-link
+    name: '@kmjjkuu/dsh-client-ui-skin-deep-whale-lm-orca-link'

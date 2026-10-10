@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "scaffold": {
+    "repository": "https://github.com/Small-tailqwq/dsh-skin-template.git"
+  },
+  "consumers": [
+    {
+      "id": "maid-atelier",
+      "host": {
+        "repository": "https://github.com/deepseek-ai/deepseek-harness.git",
+        "version": "0.1.7-rc.1",
+        "ref": "refs/tags/dsh-v0.1.7-rc.1",
+        "sha": "46a7f68b0922371ce7144b668b90e377d8e799f4"
+      }
+    },
+    {
+      "id": "orca-link",
+      "host": {
+        "repository": "https://github.com/deepseek-ai/deepseek-harness.git",
+        "version": "0.1.7-rc.1",
+        "ref": "refs/tags/dsh-v0.1.7-rc.1",
+        "sha": "46a7f68b0922371ce7144b668b90e377d8e799f4"
+      }
+    }
+  ],
+  "shared": {
+    "notes": "link",
+    "knowledge": "link",
+    "skills": [
+      {
+        "name": "dsh-note-maintainer",
+        "mode": "link"
+      },
+      {
+        "name": "dsh-plugin-verify",
+        "mode": "link"
+      },
+      {
+        "name": "dsh-boot-error-verify",
+        "mode": "link"
+      },
+      {
+        "name": "dsh-skin-upgrade",
+        "mode": "mirror"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+name: PR 描述提示
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查 PR 描述
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = (context.payload.pull_request.body ?? '')
+              .replace(/<!--[\s\S]*?-->/g, '')
+              .trim()
+            if (!body) {
+              core.warning('建议补充改动内容与验证情况，便于评审；关联 Issue 和 PR 模板均为可选。')
+            } else {
+              core.info('PR 描述已提供，接受自由格式。')
+            }
